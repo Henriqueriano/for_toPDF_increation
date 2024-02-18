@@ -1,0 +1,190 @@
+<!-- https://imasters.com.br/front-end/gerando-pdfs-com-js -->
+<!-- máscaras fonte: https://blog.dbins.com.br/mascaras-para-campos-de-formularios-com-javascript -->
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<title>
+    OSPR
+</title>    
+</head>
+<body>
+
+
+    <div style="text-align: center;">
+         <h1>• OSPR - Offline System PDF Register •</h1>
+        <br> 
+    </div>
+
+
+    <main class="data">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-5">
+                
+                <p style="font-size: large; color: #808080;">Dados Básicos:</p>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Nome</span>
+                    <input type="text" class="form-control" placeholder="Nome do Usuário" aria-label="Username" aria-describedby="basic-addon1" id="name">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Idade</span>
+                    <input type="text" class="form-control" placeholder="Idade do Usuário" aria-label="Username" aria-describedby="basic-addon1" id="age">
+                  </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Cpf</span>
+                    <input type="text" class="form-control" placeholder="Número de CPF do Usuário" aria-label="Username" aria-describedby="basic-addon1" id="cpf" maxlength="14">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Celular</span>
+                    <input type="text" class="form-control" placeholder="Número de Celular do Usuário" aria-label="Username" aria-describedby="basic-addon1" id="cel" maxlength="14">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Email</span>
+                    <input type="text" class="form-control" placeholder="Email do Usuário" aria-label="Email do Usuário" aria-describedby="basic-addon1" id="email" maxlength="100">
+                  </div>
+
+                  <p style="font-size: large; color: #808080;">Endereço:</p>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Endereço</span>
+                    <input type="text" class="form-control" placeholder="Endereço" aria-label="Username" aria-describedby="basic-addon1" id="endereco">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Nº Da casa</span>
+                    <input type="text" class="form-control" placeholder="Número da Casa" aria-label="Username" aria-describedby="basic-addon1" id="numCasa">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">CEP</span>
+                    <input type="text" class="form-control" placeholder="CEP da Rua" aria-label="Username" aria-describedby="basic-addon1" id="cep">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Complemento</span>
+                    <input type="text" class="form-control" placeholder="Complemento Opcional" aria-label="Username" aria-describedby="basic-addon1" id="complemento">
+                  </div>
+
+                  
+
+                  
+
+                  
+                  
+                <br>
+                <br>
+                <button style="margin-top: -3rem; margin-bottom: 1rem;" type="button" class="btn btn-primary" onclick="myfun()">Gerar</button>
+                <button style="margin-top: -3rem; margin-bottom: 1rem;" type="button" class="btn btn-secondary" onclick="myfun2()">Limpar</button>
+                
+            </div>
+            
+            <!-- Enchendo Linguiça, nada mais -->
+
+            <div class="col" style="border-left-style: solid; color: #808080;">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsum excepturi eaque nulla repudiandae aut numquam quisquam ullam at adipisci sint, ratione, suscipit molestiae. Quo unde voluptatibus dolores placeat itaque?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias minima veniam quasi impedit illo saepe? Adipisci cupiditate, quos ullam sint corporis voluptatem obcaecati consectetur autem suscipit provident. Nisi, architecto qui!</p>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </main>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+
+    <script>
+
+        
+        // mascara de CPF
+        const cpfc = document.getElementById("cpf");
+        cpfc.addEventListener("keydown", formatarCPF);
+        function formatarCPF(e){
+        let v=e.target.value.replace(/\D/g,"");
+        v=v.replace(/(\d{3})(\d)/,"$1.$2");
+        v=v.replace(/(\d{3})(\d)/,"$1.$2");
+        v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+        e.target.value = v;}
+
+        // mascara de telefone
+        const celc = document.getElementById("cel");
+        celc.addEventListener("keydown", formatarTelefone);
+        function formatarTelefone(e){
+        let v=e.target.value.replace(/\D/g,"");
+        v=v.replace(/^(\d\d)(\d)/g,"($1)$2"); 
+        v=v.replace(/(\d{5})(\d)/,"$1-$2");    
+        e.target.value = v;}
+  
+        function myfun()
+        {
+            let cpf = document.getElementById("cpf").value;
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let cel = document.getElementById("cel").value;
+            let email = document.getElementById("email").value;
+            let endereco = document.getElementById("endereco").value;
+            let numCasa = document.getElementById("numCasa").value;
+            let complemento = document.getElementById("complemento").value;
+            let cep = document.getElementById("cep").value;
+            
+            if (cpf == "" || name == "" || age == "" || cel == "" || email == "" || endereco == "" || numCasa == "" || complemento == "") 
+            {
+                alert("Preencha todos os campos!");
+            } 
+            else 
+            {
+                const doc = new jsPDF()
+                doc.text(["OSPR - Offline System PDF Register"],55,10);
+                doc.text("_____________________", 65, 11);
+
+                doc.text("Dados Básicos:", 80, 19);
+                doc.text([`Nome do Usuário: ${name}`,`Idade do Usuário: ${age}`, `Cpf do Usuário: ${cpf}`, `Celular do Usuário: ${cel}`, `Email do Usuário: ${email}@gmail.com`], 10, 25);
+
+
+                doc.save('OSPR.pdf');
+            } 
+        }
+
+        // Limpa os campos
+        const myfun2 = () => {
+            document.getElementById("cpf").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("cel").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("endereco").value = "";
+            document.getElementById("numCasa").value = "";
+            document.getElementById("complemento").value = "";
+            document.getElementById("cep").value = "";
+
+
+        }
+    </script>
+</body>
+
+</html>
